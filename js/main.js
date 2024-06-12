@@ -193,6 +193,7 @@ function openWhatsApp(phoneNumber) {
 }
 
 function makePhoneCall(phoneNumber) {
+    debugger;
     const callUrl = `tel:${phoneNumber}`;
     window.location.href = callUrl;  // Opens the phone dialer
 }
@@ -286,14 +287,13 @@ const toggleButtons = {
     'calendar-btn': 'calendar-menu',
     'location-btn': 'location-menu',
     'music-btn': 'music-menu',
-    'ucapan-btn': 'ucapan-menu',
     'contact-btn': 'contact-menu',
-    'btn-hadir': 'success-menu'
     // Add other button-to-menu mappings here
 };
 
 // Function to toggle a menu open/close
 function toggleMenu(menuId, event) {
+    debugger;
     event.stopPropagation(); // Prevent click from propagating
     const menu = document.getElementById(menuId);
 
@@ -318,6 +318,7 @@ function closeAllMenus() {
 
 // Add click event listeners to all toggle buttons
 for (const [buttonId, menuId] of Object.entries(toggleButtons)) {
+    console.log(buttonId, menuId)
     const button = document.getElementById(buttonId);
     button.addEventListener('click', (event) => toggleMenu(menuId, event));
 }
