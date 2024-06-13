@@ -81,7 +81,7 @@ body {
 
 .overlay .overlay-content .toggle-button.click-me{
     position: absolute;
-    top: 80%;
+    top: 74%;
     border-radius: 15px;
     height: 50px;
 }
